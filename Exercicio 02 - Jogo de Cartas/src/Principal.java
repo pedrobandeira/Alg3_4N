@@ -1,5 +1,5 @@
 public class Principal {
-
+// Classe principal
 	public static void main(String[] args) {
 		Jogo jogo = new Jogo();
 
