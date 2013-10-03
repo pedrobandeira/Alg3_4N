@@ -40,7 +40,7 @@ public class Sistema {
 				p1.setX(sc.nextInt());
 				p1.setY(sc.nextInt());
 				reta.setP1(p1);
-				reta.desenhaReta(cor, imagem);
+				reta.draw(imagem, cor);
 			}
 			if (cmd.equals("triangulo")) {
 				Triangulo triangulo = new Triangulo();
@@ -53,7 +53,7 @@ public class Sistema {
 				p2.setX(sc.nextInt());
 				p2.setY(sc.nextInt());
 				triangulo.setP2(p2);
-				triangulo.desenhaTriangulo(cor, imagem);
+				triangulo.draw(imagem, cor);
 			}
 			if (cmd.equals("circulo")) {
 				Circulo circulo = new Circulo();
@@ -61,7 +61,7 @@ public class Sistema {
 				p0.setY(sc.nextInt());
 				circulo.setCentro(p0);
 				circulo.setRaio(sc.nextInt());
-				circulo.desenhaCirculo(cor, imagem);
+				circulo.draw(imagem, cor);
 			}
 			
 			if (cmd.equals("retangulo")) {
@@ -72,7 +72,7 @@ public class Sistema {
 				p1.setX(sc.nextInt());
 				p1.setY(sc.nextInt());
 				retangulo.setP1(p1);
-				retangulo.desenhaRetangulo(cor, imagem);
+				retangulo.draw(imagem, cor);
 			}
 			if(cmd.equals("salvar")){
 				String nomeArquivo = sc.next();

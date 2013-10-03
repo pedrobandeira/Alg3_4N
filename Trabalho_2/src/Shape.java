@@ -1,7 +1,8 @@
 
 public abstract class Shape {
 	
-	public void draw(Cor c) {
+	public void draw(Imagem imagem, Cor c) {
+		
 		
 	}
 

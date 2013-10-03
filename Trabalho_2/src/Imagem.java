@@ -9,6 +9,14 @@ public class Imagem {
 	private String cor;
 	private int[][] imagem;
 	
+	public int[][] getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(int[][] imagem) {
+		this.imagem = imagem;
+	}
+
 	public Imagem(int height, int width, String color) {
 		this.imagem = new int[height][width];
 		this.cor = color;
@@ -38,16 +46,19 @@ public class Imagem {
 	}
 
 	public void setCor(String cor) {
-		if (cor.equals("c") || cor.equals("C"))
+		if (cor.equalsIgnoreCase("c"))
 		this.cor = "c";
 		else this.cor = "g";
 	}
 
-	public void setPixel(Ponto p, Cor c) {
-		
+	public void setPixel(Ponto p, Cor c) { //throws Exception {
+		//if(p.getX() < 0 || p.getX() >= width) //throw new Exception("X out of range"); 
+		//if(p.getY() < 0 || p.getY() >= height) //throw new Exception("y out of range"); 
+		this.imagem[p.getX()][p.getY()] = c.getGrey(); 
 	}
 	
 	public void addShape(Shape s, Cor c) {
+		s.draw(this, c);
 		
 	}
 	public void Salvar(String nomeArquivo) throws IOException {

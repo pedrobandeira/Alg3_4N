@@ -20,7 +20,7 @@ public class Reta {
 		this.p1 = p1;
 	}
 	
-	public void desenhaReta(Cor cor, Imagem imagem) {
+	public void draw(Imagem imagem, Cor cor) {
 		imagem.setPixel(p0, cor);
 		imagem.setPixel(p1, cor);
 

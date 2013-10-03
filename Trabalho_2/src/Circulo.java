@@ -19,7 +19,7 @@ public class Circulo extends Shape {
 		this.raio = raio;
 	}
 	
-public void desenhaCirculo(Cor cor, Imagem imagem) {
+	public void draw(Imagem imagem, Cor cor) {
 		
 		int x = 0;
 		int y = raio;

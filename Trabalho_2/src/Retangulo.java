@@ -17,9 +17,8 @@ public class Retangulo extends Shape {
 	public void setP1(Ponto p1) {
 		this.p1 = p1;
 	}
-	public void desenhaRetangulo(Cor cor, Imagem imagem) {
+	public void draw(Imagem imagem, Cor cor) {
 		Ponto ponto  = new Ponto();	
-		
 		imagem.setPixel(p0, cor);
 		imagem.setPixel(p1, cor);
 

@@ -28,7 +28,7 @@ public class Triangulo extends Shape {
 		this.p2 = p2;
 	}
 	
-	public void desenhaTriangulo(Cor cor, Imagem imagem) {
+	public void draw(Imagem imagem, Cor cor) {
 		Reta reta1 = new Reta();
 		Reta reta2 = new Reta();
 		Reta reta3 = new Reta();
@@ -36,15 +36,15 @@ public class Triangulo extends Shape {
 		
 		reta1.setP0(triangulo.getP0());
 		reta1.setP1(triangulo.getP1());
-		reta1.desenhaReta(cor, imagem);
+		reta1.draw(imagem, cor);
 		
 		reta2.setP0(triangulo.getP0());
 		reta2.setP1(triangulo.getP2());
-		reta2.desenhaReta(cor, imagem);
+		reta2.draw(imagem, cor);
 		
 		reta3.setP0(triangulo.getP1());
 		reta3.setP1(triangulo.getP2());
-		reta3.desenhaReta(cor, imagem);		
+		reta3.draw(imagem, cor);	
 	}
 	
 }
