@@ -1,11 +1,10 @@
-
 import java.util.ArrayList;
 
 public class Vertice {
     private int id;
-    private int etiqueta = Integer.MAX_VALUE;
-    private boolean visitado = false;
-    private int precedente = -1;
+    private int etiqueta = Integer.MAX_VALUE; //2 elevado a 31-1
+    private boolean visitado = false; // Mark all nodes as unvisited
+    private int precedente = -1; //Criar lista de vertices anteriores (inicializar com valor inválido para cada um. Ex: -1)
     private ArrayList<Integer> verticesVizinhos = new ArrayList<Integer>();
     private ArrayList<Integer> peso = new ArrayList<Integer>();
     

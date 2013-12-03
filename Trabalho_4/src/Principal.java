@@ -5,22 +5,24 @@ import java.util.Scanner;
 public class Principal {
 
     public static void main(String[] args) throws FileNotFoundException, IOException {
+       
+        int vInicial, vFinal;
+        
         Scanner scan = new Scanner(System.in);
-        Grafo gr = new Grafo();
-        int from, to;
+        Grafo grafo = new Grafo();
         
-        gr.montarGrafo();
+        grafo.criaGrafo();
         
-        System.out.print("Digite o vertice de partida: ");
-        from = scan.nextInt();
-        System.out.print("\nDigite o vertice de destino: ");
-        to = scan.nextInt();
+        System.out.print("Digite o vertice inicial: ");
+        vInicial = scan.nextInt();
+        System.out.print("\nDigite o vertice final: ");
+        vFinal = scan.nextInt();
         System.out.print("\n");
         
-        gr.zeraEtiquetaVerticeInicial(from);
+        grafo.zeraEtiquetaVerticeInicial(vInicial);
         
-        gr.Dijkstra();
+        grafo.Dijkstra();
         
-        System.out.println(gr.menorCaminho(from, to));
+        System.out.println(grafo.menorCaminho(vInicial, vFinal));
     }
 }

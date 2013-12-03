@@ -16,7 +16,7 @@ public class Grafo {
         this.scan = new Scanner(new FileReader("Grafo.txt"));
     }
 
-    public void montarGrafo() throws FileNotFoundException, IOException {
+    public void criaGrafo() throws FileNotFoundException, IOException {
         int idVertice;
         int vizinho;
 
@@ -53,7 +53,7 @@ public class Grafo {
                     grafo.add(ver4);
                 }
                 grafo.get(this.verticeExiste).setVerticeVizinhos(vizinho);
-                grafo.get(this.verticeExiste).setPeso(Integer.parseInt(scan.next()));
+                grafo.get(this.verticeExiste).setPeso(scan.nextInt());
             } else {
                 Vertice ver1 = new Vertice();
                 ver1.setId(idVertice);
@@ -154,14 +154,14 @@ public class Grafo {
         } while (existeVerticeNaoVisitado != 0);
     }
 
-    public String menorCaminho(int from, int to) {
+    public String menorCaminho(int vInicial, int vFinal) {
         String menorCaminho = "";
-        this.caminho.add(to);
+        this.caminho.add(vFinal);
 
         for (int i = 0; i < this.grafo.size(); i++) {
-            if (this.grafo.get(i).getId() == to && to != from) {
+            if (this.grafo.get(i).getId() == vFinal && vFinal != vInicial) {
                 this.caminho.add(this.grafo.get(i).getPrecedente());
-                to = this.grafo.get(i).getPrecedente();
+                vFinal = this.grafo.get(i).getPrecedente();
                 i = 0;
             }
         }
